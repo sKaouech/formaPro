@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>tuto 1</title>
+    <meta name="description" content="">
+    <meta name="google" value="notranslate">
+    <meta name="viewport" content="width=device-width">
+
+</head>
+
+<!--<5>-->
+<!--ng-controller="directiveController as vm"-->
+<body ng-app="showApp">
+<div ng-controller="showController">
+    <button ng-click="show()">show</button>
+    <button ng-click="hide()">hide</button>
+    <br><br>
+
+    <div ng-show="status">
+        <!--<2>-->
+        <label>Name : </label>
+        <input type="text" ng-model="yourName">
+
+        <!--<1>-->
+        <div>
+            <h1>hello : {{yourName}} </h1>
+
+        </div>
+
+        <!--<4>-->
+        <button ng-click="showMsg()">click</button>
+
+        <!--<3>-->
+        <ul>
+            <li ng-repeat="phone in phones">
+                <span>{{phone.name}}</span>
+
+                <p>{{phone.snippet}}</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="showApp.js"></script>
+</body>
+</html>
